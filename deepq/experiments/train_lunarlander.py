@@ -20,7 +20,7 @@ def main():
 	lr=0.00025,
         #max_timesteps=10000,
         #max_timesteps=100000,
-        max_timesteps=30000000,
+        max_timesteps=6000000,
         #buffer_size=50000,
         buffer_size=100000,
 	target_network_update_freq=10000,
