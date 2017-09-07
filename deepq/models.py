@@ -5,7 +5,9 @@ import tensorflow.contrib.layers as layers
 def _mlp(hiddens, inpt, num_actions, scope, reuse=False):
     with tf.variable_scope(scope, reuse=reuse):
         out = inpt
+        print ("^^^^^^^^^^^^^^^^^^^^^^^^^^^neurons each layer:",out)
         for hidden in hiddens:
+            #out = layers.fully_connected(out, num_outputs=hidden, activation_fn=tf.nn.relu)
             out = layers.fully_connected(out, num_outputs=hidden, activation_fn=tf.nn.relu)
         out = layers.fully_connected(out, num_outputs=num_actions, activation_fn=None)
         return out
